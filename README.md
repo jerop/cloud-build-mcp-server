@@ -35,7 +35,19 @@ go build -o cloud-build-mcp-server
 ./cloud-build-mcp-server
 ```
 
+
 ## Use in Agent
 
-TODO(jerop): add instructions
+To use this MCP server with your agent, add the following to your settings:
 
+```jsonc
+{
+    "mcpServers": {
+        "cloudbuild": {
+            "command": "/path/to/cloud-build-mcp-server"
+        }
+    }
+}
+```
+
+Consider using this in [Gemini CLI](https://github.com/google-gemini/gemini-cli).
